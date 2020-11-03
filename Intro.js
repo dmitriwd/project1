@@ -11,7 +11,7 @@ class Intro {
 
     draw(){
         background(bg);
-
+        
         
     }
 }

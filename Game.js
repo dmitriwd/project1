@@ -16,8 +16,8 @@ class Game {
           }
 
         if (frameCount % 60 === 0) {
-            //this.obstacle.push(new ObstacleDownSlow(300, p5));
-            //this.obstacle.push(new ObstacleDownFast(700, js));
+            this.obstacle.push(new ObstacleDownSlow(300, p5));
+            this.obstacle.push(new ObstacleDownFast(700, js));
         }
 
         if (frameCount % 180 === 0){

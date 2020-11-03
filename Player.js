@@ -21,6 +21,6 @@ class Player{
     };
 
     draw(){
-      image(ironhackercopy, this.x, this.y);
+      image(ironhack, this.x, this.y);
     }
 }
