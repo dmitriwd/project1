@@ -6,8 +6,18 @@ class Player{
         this.height = 222;
     };
 
+    collisioincheck(obstacle){
+        const playersRightSide = this.x + this.width;
+        const obstaclesRightSide = obstacle.x + obstacle.width;
+        const playersbottomSide = this.y + this.height;
+        const obstaclesBottomSide = obstacle.y + obstacle.height;
+
+        const isTouchingOnRight = 
+    }
+
+
     moveRight(steps) {
-        if (this.x >= 1600 - this.width) {
+        if (this.x >= 900 - this.width) {
           return;
         }
         this.x += steps;

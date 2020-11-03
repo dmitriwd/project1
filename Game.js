@@ -23,14 +23,16 @@ class Game {
         });
 
         if (keyIsDown(37)) {
-            this.player1.moveLeft(1);
+            this.player.moveLeft(10);
         }
 
         if (keyIsDown(39)) {
-            this.player1.moveRight(1);
+            this.player.moveRight(10);
         }
 
         this.player.draw();
+
+        collisioincheck(obstacle)
     }
 
 }

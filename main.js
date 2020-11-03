@@ -7,11 +7,10 @@ function preload(){
 const game = new Game;
 
 function setup(){
-    createCanvas(1600, 900);
+    createCanvas(900, 600);
 }
 
 function draw(){
-    background('white');
+    background('blue');
     game.draw();
-    
 }
