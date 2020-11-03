@@ -4,6 +4,7 @@ function preload(){
     css = loadImage('assets/css.jpg')
     js = loadImage('assets/js.png')
     bootstrap = loadImage('assets/bootstrap.png')
+    ironhackercopy = loadImage('assets/ironhackercopy.png')
 };
 const game = new Game;
 const intro = new Intro;
@@ -16,7 +17,7 @@ function setup(){
 }
 
 function draw(){
-    background(bg);
+    background('white');
     
     if (level === 'Intro'){
         intro.draw();

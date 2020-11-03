@@ -5,7 +5,7 @@ class Intro {
         
         startButton = createButton('Start');
         startButton.mousePressed(startGame);
-        startButton.position(100, 100);
+        startButton.position(390, 250);
 
     }
 

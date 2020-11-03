@@ -4,3 +4,4 @@ let js;
 let bootstrap;
 let startButton;
 let bg;
+let ironhackercopy;
