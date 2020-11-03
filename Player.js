@@ -7,7 +7,7 @@ class Player{
     };
 
     moveRight(steps) {
-        if (this.x >= 900 - this.width) {
+        if (this.x >= 1056 - this.width) {
           return;
         }
         this.x += steps;

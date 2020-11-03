@@ -1,6 +1,4 @@
 class Intro {
-    preload(){
-        bg = loadImage("./assets/bg.jpg");    }
     setup(){
         
         startButton = createButton('Start');
@@ -10,7 +8,7 @@ class Intro {
     }
 
     draw(){
-        background(bg);
+        background(bgIntro);
         
         
     }

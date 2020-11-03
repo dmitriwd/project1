@@ -2,12 +2,18 @@ let p5;
 let css;
 let js;
 let bootstrap;
-let startButton;
-let bg;
-let ironhackercopy;
-let ironhack;
-let git;
 let github;
 let mongodb;
 let nodejs;
 let react;
+
+
+
+let ironhackercopy;
+let ironhack;
+
+
+let startButton;
+
+let bgIntro;
+let bgGame;
