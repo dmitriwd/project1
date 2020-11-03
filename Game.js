@@ -1,6 +1,7 @@
 class Game {
     constructor(){
         this.arr = [];
+        this.player = new Player();
     }
 
     draw(){
@@ -13,6 +14,7 @@ class Game {
             this.arr.push(new ObstacleUpFast(500, css));
             this.arr.push(new ObstacleUpSlow(900, bootstrap));
         }
+        
         this.arr.forEach((obstacle, index) => {
             obstacle.draw();
             if (obstacle.y + obstacle.height <= -100) {
@@ -20,7 +22,15 @@ class Game {
             }
         });
 
+        if (keyIsDown(37)) {
+            this.player1.moveLeft(1);
+        }
 
+        if (keyIsDown(39)) {
+            this.player1.moveRight(1);
+        }
+
+        this.player.draw();
     }
 
 }
