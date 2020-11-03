@@ -2,7 +2,7 @@ class ObstacleDownSlow{
     constructor(position, image){
         this.x = position;
         this.y = 0
-        this.width = 100;
+        this.width = 48;
         this.height = 70;
         this.image = image;
     }

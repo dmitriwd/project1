@@ -8,22 +8,30 @@ class Game {
         this.player.draw();
 
         if (keyIsDown(37)) {
-            this.player.moveLeft(15);
+            this.player.moveLeft(5);
           }
         
           if (keyIsDown(39)) {
-            this.player.moveRight(15);
+            this.player.moveRight(5);
           }
-
+        
         if (frameCount % 60 === 0) {
-            this.obstacle.push(new ObstacleDownSlow(300, p5));
-            this.obstacle.push(new ObstacleDownFast(700, js));
+            this.obstacle.push(new ObstacleDownSlow(145, p5));
         }
 
         if (frameCount % 180 === 0){
-            this.obstacle.push(new ObstacleUpFast(500, css));
-            //this.obstacle.push(new ObstacleUpSlow(900, bootstrap));
+          this.obstacle.push(new ObstacleUpSlow(241, css));
+      }
+
+        if (frameCount % 80 === 0) {
+          this.obstacle.push(new ObstacleDownFast(337, js));
         }
+
+        if (frameCount % 140 === 0){
+            this.obstacle.push(new ObstacleUpFast(433, bootstrap));
+        }
+
+        
         
         this.obstacle.forEach((obstacle, index) => {
             obstacle.draw();
