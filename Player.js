@@ -6,15 +6,22 @@ class Player{
         this.height = 222;
     };
 
-    collisioincheck(obstacle){
+    collisioncheck(obstacle){
         const playersRightSide = this.x + this.width;
         const obstaclesRightSide = obstacle.x + obstacle.width;
         const playersbottomSide = this.y + this.height;
         const obstaclesBottomSide = obstacle.y + obstacle.height;
 
-        const isTouchingOnRight = 
-    }
-
+        const touchingLeft = playersRightSide >= obstacle.x;
+        const touchingRight = this.x <= obstaclesRightSide;
+        const touchingTop = playersbottomSide >= obstacle.height;
+        const touchingBottom = this.y <= obstaclesBottomSide;
+    
+    if (touchingBottom && touchingLeft && touchingRight && touchingTop){
+        return true;
+    };
+    return false;
+    };
 
     moveRight(steps) {
         if (this.x >= 900 - this.width) {
