@@ -20,6 +20,8 @@ class Player{
         this.x -= steps;
     };
 
+    
+
     draw(){
         rect(this.x, this.y, this.width, this.height);
     }

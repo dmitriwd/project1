@@ -14,3 +14,6 @@ function draw(){
     background('blue');
     game.draw();
 }
+
+
+
