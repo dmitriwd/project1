@@ -3,18 +3,16 @@ class Game {
         this.obstacle = [];
         this.player = new Player();
     }
-
     
-
     draw(){
         this.player.draw();
 
         if (keyIsDown(37)) {
-            this.player.moveLeft(5);
+            this.player.moveLeft(15);
           }
         
           if (keyIsDown(39)) {
-            this.player.moveRight(5);
+            this.player.moveRight(15);
           }
 
         if (frameCount % 60 === 0) {
@@ -34,17 +32,27 @@ class Game {
             }
 
             if (this.collisionCheck(obstacle, this.player)) {
-                noLoop();
+              noLoop();
             };
         });
     };
-   
+
+
 
     collisionCheck(obstacle, player){
-        if (player.x + player.width < obstacle.x){
-            
+      if (player.x + player.width < obstacle.x){
+        return false;
         }
+      if (obstacle.x + obstacle.width < player.x) {
+            return false;
+          }
+          if (player.y > obstacle.y + obstacle.height) {
+            return false;
+          }
+          if (obstacle.y > player.y + player.height) {
+            return false;
+          }
+          return true;     
     }
-        
 
-}
+};

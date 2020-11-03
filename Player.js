@@ -1,9 +1,9 @@
 class Player{
     constructor() {
-        this.x = 60;
-        this.y = 487;
-        this.width = 120;
-        this.height = 222;
+        this.x = 40;
+        this.y = 467;
+        this.width = 30;
+        this.height = 60;
     };
 
     moveRight(steps) {
@@ -19,8 +19,6 @@ class Player{
         }
         this.x -= steps;
     };
-
-    
 
     draw(){
         rect(this.x, this.y, this.width, this.height);
