@@ -16,13 +16,13 @@ class Game {
           }
 
         if (frameCount % 60 === 0) {
-            this.obstacle.push(new ObstacleDownSlow(300, p5));
-            this.obstacle.push(new ObstacleDownFast(700, js));
+            //this.obstacle.push(new ObstacleDownSlow(300, p5));
+            //this.obstacle.push(new ObstacleDownFast(700, js));
         }
 
         if (frameCount % 180 === 0){
             this.obstacle.push(new ObstacleUpFast(500, css));
-            this.obstacle.push(new ObstacleUpSlow(900, bootstrap));
+            //this.obstacle.push(new ObstacleUpSlow(900, bootstrap));
         }
         
         this.obstacle.forEach((obstacle, index) => {
@@ -40,10 +40,10 @@ class Game {
 
 
     collisionCheck(obstacle, player){
-      if (player.x + player.width < obstacle.x){
-        return false;
-        }
-      if (obstacle.x + obstacle.width < player.x) {
+          if (player.x + player.width < obstacle.x){
+          return false;
+          }
+          if (obstacle.x + obstacle.width < player.x) {
             return false;
           }
           if (player.y > obstacle.y + obstacle.height) {
