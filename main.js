@@ -1,6 +1,7 @@
 function preload() {
-  bgIntro = loadImage("./assets/bg.jpeg");
-  bgGame = loadImage("./assets/bg.jpeg");
+  bgIntro = loadImage("./assets/bg.jpg");
+  bgGame = loadImage("./assets/bgGame.jpg");
+  player = loadImage("./assets/player.jpg");
   //soundFormats("mp3");
   //gameSong = loadSound("./audio/guns.mp3");
 
@@ -27,7 +28,7 @@ function setup() {
 
 function draw() {
   //gameSong.play();
-  background("white");
+  background(bgGame);
 
   if (level === "Intro") {
     intro.draw();

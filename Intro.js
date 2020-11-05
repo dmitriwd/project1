@@ -1,8 +1,8 @@
 class Intro {
   setup() {
-    startButton = createButton("Be a student");
+    startButton = createButton("Start Now");
     startButton.mousePressed(startGame);
-    startButton.position(520, 270);
+    startButton.position(480, 280);
   }
 
   draw() {

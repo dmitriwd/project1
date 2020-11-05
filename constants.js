@@ -16,3 +16,5 @@ let bgIntro;
 let bgGame;
 
 let gameSong;
+
+let player;

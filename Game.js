@@ -6,7 +6,6 @@ class Game {
       "The best revenge is massive success.",
       "By seeking and blundering we learn.",
       "Computers are good at following instructions, but not at reading your mind.",
-      "Never memorize something that you can look up.",
       "Controlling complexity is the essence of computer programming.",
       "Before software can be reusable it first has to be usable.",
       "Deleted code is debugged code. ",
@@ -16,6 +15,7 @@ class Game {
       "A good programmer is someone who always looks both ways before crossing a one-way street.",
       "In theory there is no difference between theory and practice. In practice there is.",
       "Ever Tried. Ever failed. No matter. Try again. Fail again. Fail better.",
+      "Who said, that it is gonna be easy?",
       "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
     ];
     this.gameOver = false;
@@ -30,7 +30,7 @@ class Game {
       Math.floor(Math.random() * this.arrayOfSayings.length)
     ];
     textSize(48);
-    text(randomSaying, 40, 300, 1000, 400);
+    text(randomSaying, 40, 220, 1000, 400);
     this.gameOver = false;
 
     setTimeout(() => {
@@ -42,7 +42,7 @@ class Game {
   drawCounter() {
     let counterBox = `Learnings: ${this.counter}`;
     textSize(32);
-    text(counterBox, 48, 48);
+    text(counterBox, 828, 580);
   }
 
   draw() {
@@ -57,7 +57,7 @@ class Game {
       this.player.moveRight(6);
     }
     //1
-    if (frameCount % 160 === 0) {
+    if (frameCount % 140 === 0) {
       this.obstacle.push(new ObstacleDownSlow(145, p5));
     }
     //2
@@ -66,26 +66,26 @@ class Game {
     }
     //3
     if (frameCount % 180 === 0) {
-      this.obstacle.push(new ObstacleDownSlow(337, js));
+      this.obstacle.push(new ObstacleDownFast(337, js));
     }
     //4
-    if (frameCount % 80 === 0) {
+    if (frameCount % 95 === 0) {
       this.obstacle.push(new ObstacleUpSlow(433, github));
     }
     //5
-    if (frameCount % 170 === 0) {
+    if (frameCount % 165 === 0) {
       this.obstacle.push(new ObstacleDownVeryFast(529, bootstrap));
     }
     //6
-    if (frameCount % 70 === 0) {
-      this.obstacle.push(new ObstacleUpSlow(625, mongodb));
+    if (frameCount % 95 === 0) {
+      this.obstacle.push(new ObstacleUpFast(625, mongodb));
     }
     //7
     if (frameCount % 170 === 0) {
       this.obstacle.push(new ObstacleDownFast(721, nodejs));
     }
     //8
-    if (frameCount % 60 === 0) {
+    if (frameCount % 80 === 0) {
       this.obstacle.push(new ObstacleUpFast(817, react));
     }
 
