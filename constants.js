@@ -9,7 +9,7 @@ let react;
 
 
 
-let ironhackercopy;
+let ironhacker;
 let ironhack;
 
 

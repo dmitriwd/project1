@@ -1,9 +1,9 @@
 class Player{
     constructor() {
         this.x = 48;
-        this.y = 300;
-        this.width = 48;
-        this.height = 60;
+        this.y = 350;
+        this.width = 40;
+        this.height = 40;
     };
 
     moveRight(steps) {

@@ -6,10 +6,10 @@ function preload(){
     css = loadImage('assets/css.jpg');
     js = loadImage('assets/js.png');
     bootstrap = loadImage('assets/bootstrap.png');
-    ironhackercopy = loadImage('assets/ironhackercopy.png');
+    ironhacker = loadImage('assets/ironhacker.png');
     ironhack = loadImage('assets/ironhack.png');
-    github = loadImage('assets/github.jpeg');
-    mongodb = loadImage('assets/mongodb.png');
+    github = loadImage('assets/github.png');
+    mongodb = loadImage('assets/mongodb.jpeg');
     nodejs = loadImage('assets/nodejs.jpg');
     react = loadImage('assets/react.png');
 };
@@ -25,7 +25,7 @@ function setup(){
 
 function draw(){
     
-    background(bgGame);
+    background('white');
     
     if (level === 'Intro'){
         intro.draw();

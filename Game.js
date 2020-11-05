@@ -8,29 +8,44 @@ class Game {
         this.player.draw();
 
         if (keyIsDown(37)) {
-            this.player.moveLeft(5);
+            this.player.moveLeft(6);
           }
         
           if (keyIsDown(39)) {
-            this.player.moveRight(5);
+            this.player.moveRight(6);
           }
-        
-        if (frameCount % 60 === 0) {
+        //1
+        if (frameCount % 160 === 0) {
             this.obstacle.push(new ObstacleDownSlow(145, p5));
         }
-
-        if (frameCount % 180 === 0){
+        //2
+        if (frameCount % 95 === 0){
           this.obstacle.push(new ObstacleUpSlow(241, css));
-      }
-
-        if (frameCount % 80 === 0) {
-          this.obstacle.push(new ObstacleDownFast(337, js));
         }
-
-        if (frameCount % 140 === 0){
-            this.obstacle.push(new ObstacleUpFast(433, bootstrap));
+        //3 
+        if (frameCount % 180 === 0) {
+          this.obstacle.push(new ObstacleDownSlow(337, js));
         }
-
+        //4
+        if (frameCount % 80 === 0){
+            this.obstacle.push(new ObstacleUpSlow(433, github));
+        }
+        //5 
+        if (frameCount % 170 === 0) {
+          this.obstacle.push(new ObstacleDownVeryFast(529, bootstrap));
+        }
+        //6
+        if (frameCount % 70 === 0){
+          this.obstacle.push(new ObstacleUpSlow(625, mongodb));
+        }
+        //7
+        if (frameCount % 170 === 0) {
+          this.obstacle.push(new ObstacleDownFast(721, nodejs));
+        }
+        //8
+        if (frameCount % 60 === 0){
+          this.obstacle.push(new ObstacleUpFast(817, react));
+        }
         
         
         this.obstacle.forEach((obstacle, index) => {
@@ -48,16 +63,16 @@ class Game {
 
 
     collisionCheck(obstacle, player){
-          if (player.x + player.width < obstacle.x){
+          if (player.x + player.width <= obstacle.x){
           return false;
           }
-          if (obstacle.x + obstacle.width < player.x) {
+          if (obstacle.x + obstacle.width <= player.x) {
             return false;
           }
-          if (player.y > obstacle.y + obstacle.height) {
+          if (player.y >= obstacle.y + obstacle.height) {
             return false;
           }
-          if (obstacle.y > player.y + player.height) {
+          if (obstacle.y >= player.y + player.height) {
             return false;
           }
           return true;     
