@@ -2,8 +2,18 @@ class Game {
     constructor(){
         this.obstacle = [];
         this.player = new Player();
+        this.arrayOfSayings = ["it's most probably a typo!", "even senior developers google it!", "check stackoverflow!", "com'on, try harder!", "you can do it!"];
     }
     
+    
+    throwSayings(){
+      
+      clear();
+      let randomSaying = this.arrayOfSayings[Math.floor(Math.random()*this.arrayOfSayings.length)];
+      textSize(88)
+      text(randomSaying, 200, 200, 150, 150);
+    }
+
     draw(){
         this.player.draw();
 
@@ -49,15 +59,23 @@ class Game {
         
         
         this.obstacle.forEach((obstacle, index) => {
-            obstacle.draw();
+          obstacle.draw();
             if (obstacle.y + obstacle.height <= -100) {
               this.obstacle.splice(index, 1);
             }
 
             if (this.collisionCheck(obstacle, this.player)) {
               noLoop();
+              this.throwSayings();
+
+              this.player.x = 48;
             };
+            
         });
+
+        
+
+        
     };
 
 
