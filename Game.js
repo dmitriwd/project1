@@ -3,11 +3,20 @@ class Game {
     this.obstacle = [];
     this.player = new Player();
     this.arrayOfSayings = [
-      "it's most probably a typo!",
-      "even senior developers google it!",
-      "check stackoverflow!",
-      "com'on, try harder!",
-      "you can do it!",
+      "The best revenge is massive success.",
+      "By seeking and blundering we learn.",
+      "Computers are good at following instructions, but not at reading your mind.",
+      "Never memorize something that you can look up.",
+      "Controlling complexity is the essence of computer programming.",
+      "Before software can be reusable it first has to be usable.",
+      "Deleted code is debugged code. ",
+      "Wisdom is not a product of schooling but of the lifelong attempt to acquire it.",
+      "We cannot solve our problems with the same thinking we used when we created them.",
+      "There are no short cuts to any place worth going.",
+      "A good programmer is someone who always looks both ways before crossing a one-way street.",
+      "In theory there is no difference between theory and practice. In practice there is.",
+      "Ever Tried. Ever failed. No matter. Try again. Fail again. Fail better.",
+      "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
     ];
     this.gameOver = false;
     this.counter = 0;
@@ -21,7 +30,7 @@ class Game {
       Math.floor(Math.random() * this.arrayOfSayings.length)
     ];
     textSize(48);
-    text(randomSaying, 200, 200);
+    text(randomSaying, 40, 300, 1000, 400);
     this.gameOver = false;
 
     setTimeout(() => {
@@ -31,7 +40,7 @@ class Game {
   }
 
   drawCounter() {
-    let counterBox = `Your trials so far: ${this.counter}`;
+    let counterBox = `Learnings: ${this.counter}`;
     textSize(32);
     text(counterBox, 48, 48);
   }

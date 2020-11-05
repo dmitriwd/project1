@@ -7,13 +7,12 @@ let mongodb;
 let nodejs;
 let react;
 
-
-
 let ironhacker;
 let ironhack;
-
 
 let startButton;
 
 let bgIntro;
 let bgGame;
+
+let gameSong;
